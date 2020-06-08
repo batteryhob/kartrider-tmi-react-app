@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> matches snapshot 1`] = `
+<div>
+  <header>
+    <div
+      class="contents"
+    >
+      <i
+        class="fas fa-home"
+      />
+      <div
+        class="menu-center desktop"
+      >
+        <ul>
+          <li
+            class="active"
+          >
+            검색
+          </li>
+          <li>
+            랭킹
+          </li>
+          <li>
+            카트
+          </li>
+          <li>
+            트랙
+          </li>
+        </ul>
+        <div
+          class="underbar"
+        />
+      </div>
+      <div
+        class="menu-right"
+      >
+        <i
+          class="fas fa-search"
+        />
+        <i
+          class="fas fa-bars"
+        />
+      </div>
+    </div>
+  </header>
+</div>
+`;
