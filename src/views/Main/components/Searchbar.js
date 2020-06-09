@@ -13,6 +13,7 @@ class Searchbar extends Component {
     }
 
     inputChange = (e) => {
+        this.props.activeCheck(e.target.value);
         this.setState({
             keyword : e.target.value
         })
