@@ -1,25 +1,42 @@
 import React from 'react';
 
 import Header from '../../shared/Header';
-import Footer from '../../shared/Footer';
+
+import Sticky from './components/Sticky';
+import Footer from './components/Footer';
 
 import Title from './components/Title';
-import Analysis from './components/Analysis';
 import Summary from './components/Summary';
-import Match from './components/Match';
+import Record from './components/Record';
+import Matches from './components/Matches';
+
+import './user.css'
 
 function User() {
   return (
-    <section>
-      <Header/>
-        <div>
+    <div id="user">
+      <Header menu1='검색' menu2='랭킹' menu3='카트' menu4='트랙'/>
+      <Sticky/>
+        <main>
           <Title/>
-          <Analysis/>
-          <Summary/>
-          <Match/>
-        </div>
+          <section>
+              <div className="mode">
+                  <ul>
+                      <li>
+                          <span className="active">개인전</span>
+                      </li>
+                      <li>
+                          <span>팀전</span>
+                      </li>
+                  </ul>
+              </div>
+              <Summary/>
+              <Record/>
+              <Matches/>
+          </section>
+        </main>
       <Footer/>
-    </section>
+    </div>
   );
 }
 

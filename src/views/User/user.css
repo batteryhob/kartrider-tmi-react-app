@@ -1,0 +1,1289 @@
+/* app.sass */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+#user .sticky,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+#user .sticky,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+ul,
+ol {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+em,
+dfn,
+i {
+  font-style: normal; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: none; }
+
+input,
+select {
+  vertical-align: middle; }
+
+input {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
+
+input[type="checkbox"] {
+  appearance: none; }
+
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+/*font style asset*/
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype"); }
+
+.svg-icon-important-ver-2-14, .svg-icon-share-14, .svg-icon-tmi-checkflag-01, .svg-icon-tmi-sademotion-01, .svg-icon-tmi-trophy-01, .svg-icon-view-14 {
+  background: url("/svg/sprite.css-7b813607.svg") no-repeat; }
+
+.svg-icon-important-ver-2-14 {
+  background-position: 58.8235294117647% 58.8235294117647%; }
+
+.svg-icon-important-ver-2-14-dims {
+  width: 18px;
+  height: 18px; }
+
+.svg-icon-share-14 {
+  background-position: 76.47058823529412% 58.8235294117647%; }
+
+.svg-icon-share-14-dims {
+  width: 18px;
+  height: 18px; }
+
+.svg-icon-tmi-checkflag-01 {
+  background-position: 0 0; }
+
+.svg-icon-tmi-checkflag-01-dims {
+  width: 60px;
+  height: 60px; }
+
+.svg-icon-tmi-sademotion-01 {
+  background-position: 100% 0; }
+
+.svg-icon-tmi-sademotion-01-dims {
+  width: 60px;
+  height: 60px; }
+
+.svg-icon-tmi-trophy-01 {
+  background-position: 0 100%; }
+
+.svg-icon-tmi-trophy-01-dims {
+  width: 60px;
+  height: 60px; }
+
+.svg-icon-view-14 {
+  background-position: 94.11764705882354% 58.8235294117647%; }
+
+.svg-icon-view-14-dims {
+  width: 18px;
+  height: 18px; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans KR";
+  font-size: 10px;
+  font-weight: 500;
+  overflow-x: hidden; }
+
+.mobile {
+  display: block; }
+
+.desktop {
+  display: none; }
+
+#user {
+  background-color: #f7f7f7;
+  padding-bottom: 1px;
+  /* app.sass */ }
+  #user header, #user .sticky {
+    min-width: 375px;
+    height: 60px;
+    background-color: #fff; }
+    #user header .contents, #user .sticky .contents {
+      position: relative;
+      line-height: 60px; }
+      #user header .contents .tmi, #user .sticky .contents .tmi {
+        vertical-align: middle;
+        width: 52px;
+        height: 20px;
+        margin-left: 20px; }
+      #user header .contents .menu-right, #user .sticky .contents .menu-right {
+        position: absolute;
+        top: 5px;
+        right: 20px; }
+  #user .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 9;
+    background-color: #fff;
+    transition: transform .3s ease-in-out;
+    transform: translate(0px, -60px);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.07); }
+    #user .sticky.active {
+      transform: translate(0px, 0px); }
+    #user .sticky .contents .profile {
+      display: inline-block;
+      line-height: 60px; }
+      #user .sticky .contents .profile img {
+        margin-left: 20px;
+        width: 40px;
+        vertical-align: middle; }
+      #user .sticky .contents .profile .name {
+        display: inline-block;
+        margin-left: 12px;
+        font-size: 13px;
+        vertical-align: middle; }
+        #user .sticky .contents .profile .name p {
+          line-height: 19px;
+          font-weight: 400; }
+          #user .sticky .contents .profile .name p.nick {
+            font-size: 14px;
+            font-weight: 500; }
+  #user main .title {
+    position: relative;
+    min-width: 375px;
+    height: calc(328px - 60px);
+    background-color: #fff;
+    transition: height .5s ease; }
+    #user main .title .name {
+      margin: 0 auto;
+      padding: 20px;
+      padding-top: 40px;
+      max-width: 1280px; }
+      #user main .title .name .lv .level {
+        font-size: 1.6em; }
+      #user main .title .name .lv .nickname {
+        font-size: 2.8em; }
+      #user main .title .name .sub {
+        margin-top: 20px;
+        font-size: 1.4em;
+        color: #999999;
+        font-weight: 400; }
+        #user main .title .name .sub span {
+          margin-left: 3px;
+          font-weight: 500; }
+      #user main .title .name .share {
+        margin-top: 31px;
+        color: #666666;
+        font-weight: 400; }
+        #user main .title .name .share ul {
+          display: flex;
+          height: 18px;
+          line-height: 18px; }
+          #user main .title .name .share ul li {
+            margin-right: 30px;
+            cursor: pointer; }
+            #user main .title .name .share ul li span {
+              margin-left: 6px;
+              font-size: 1.4em;
+              vertical-align: top; }
+            #user main .title .name .share ul li:last-child {
+              margin-right: 0px; }
+    #user main .title .thumbnail {
+      position: absolute;
+      top: calc(145px - 60px);
+      right: 20px;
+      width: 140px;
+      height: 140px;
+      border-radius: 71px;
+      box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.07);
+      border-width: 1.3px;
+      border-image-source: linear-gradient(127deg, #e6f8fe 14%, #f4fcf4 86%);
+      border-image-slice: 1;
+      background-image: linear-gradient(118deg, #f4fcff 13%, #f8fdfb 76%, #fffff8 87%);
+      transition: right .5s ease;
+      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.1); }
+      #user main .title .thumbnail .profile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -62.5px;
+        margin-left: -52px;
+        width: 104px;
+        height: 113px;
+        background-image: url(/img/profile-round.png);
+        background-size: contain; }
+        #user main .title .thumbnail .profile.other {
+          background-image: url(/img/profile-round2.png); }
+  #user main section {
+    position: relative;
+    margin-top: 104px;
+    min-width: 375px;
+    transition: margin-top .5s ease; }
+    #user main section .mode {
+      position: absolute;
+      top: calc(-29px - 18px);
+      width: 100%;
+      min-width: 375px;
+      text-align: center;
+      font-size: 22px; }
+      #user main section .mode ul {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        #user main section .mode ul li span {
+          color: #999999;
+          cursor: pointer; }
+          #user main section .mode ul li span.active {
+            color: #000;
+            border-bottom: 2px solid #000; }
+          #user main section .mode ul li span:hover {
+            color: #000;
+            border-bottom: 2px solid #000; }
+        #user main section .mode ul li:first-child {
+          color: #999999; }
+          #user main section .mode ul li:first-child::after {
+            content: " \B7 "; }
+        #user main section .mode ul li:nth-child(2) {
+          margin-left: 5px; }
+    #user main section .summary {
+      margin: 20px auto;
+      padding: 0px 20px 0px 20px;
+      max-width: 1280px; }
+      #user main section .summary .contents {
+        display: flex;
+        padding: 34px 24px 40px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        background-color: #fff; }
+        #user main section .summary .contents .left {
+          width: 100%; }
+          #user main section .summary .contents .left .total .small {
+            font-size: 18px; }
+          #user main section .summary .contents .left .total .big {
+            font-size: 26px; }
+          #user main section .summary .contents .left .total {
+            font-size: 18px; }
+        #user main section .summary .contents .right {
+          width: 100%;
+          padding-top: 34px;
+          display: flex; }
+          #user main section .summary .contents .right .chart {
+            flex: 1;
+            text-align: center; }
+            #user main section .summary .contents .right .chart .draw {
+              position: relative;
+              margin-right: 5px;
+              margin-left: 5px; }
+              #user main section .summary .contents .right .chart .draw svg {
+                height: 100%;
+                transform: rotate(-90deg);
+                width: 100%;
+                transition: all .8s ease-in-out; }
+              #user main section .summary .contents .right .chart .draw .progress-bar__background {
+                fill: none;
+                stroke: #e2eff0;
+                stroke-width: 2; }
+              #user main section .summary .contents .right .chart .draw .progress-bar__progress {
+                fill: none;
+                stroke-dasharray: 100 100;
+                stroke-dashoffset: 40;
+                stroke-linecap: round;
+                stroke-width: 2;
+                transition: stroke-dashoffset 1s ease-in-out; }
+              #user main section .summary .contents .right .chart .draw .icons {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }
+                #user main section .summary .contents .right .chart .draw .icons img {
+                  width: 60px; }
+            #user main section .summary .contents .right .chart .desc {
+              line-height: 24px;
+              margin-top: 11px;
+              margin-right: 5px;
+              margin-left: 5px;
+              font-size: 1.6em; }
+        #user main section .summary .contents .bottom {
+          width: 100%;
+          margin-top: 34px; }
+          #user main section .summary .contents .bottom .platform {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 21px;
+            border-radius: 25px;
+            background-color: #f6f6f6;
+            font-size: 1.4em;
+            font-weight: 400;
+            color: #666666;
+            cursor: pointer; }
+            #user main section .summary .contents .bottom .platform i {
+              position: absolute;
+              top: 18px;
+              right: 21px; }
+            #user main section .summary .contents .bottom .platform.active {
+              background-color: #fff;
+              border: solid 1px #ccc; }
+            #user main section .summary .contents .bottom .platform:hover {
+              background-color: #fff;
+              border: solid 1px #ccc; }
+    #user main section .record {
+      margin: 20px auto;
+      padding: 0px 20px 0px 20px;
+      max-width: 1280px; }
+      #user main section .record .contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        #user main section .record .contents .left {
+          width: 100%;
+          height: 100%;
+          padding: 34px 24px 40px 24px;
+          border-radius: 10px;
+          background-color: #fff;
+          margin-bottom: 20px; }
+          #user main section .record .contents .left .wrapper {
+            display: none;
+            width: 100%; }
+            #user main section .record .contents .left .wrapper .top {
+              font-size: 1.8em; }
+            #user main section .record .contents .left .wrapper .desc ul {
+              margin-top: 6px; }
+              #user main section .record .contents .left .wrapper .desc ul li {
+                display: flex;
+                margin-top: 24px; }
+                #user main section .record .contents .left .wrapper .desc ul li div.first {
+                  flex: 1.1;
+                  line-height: 46px;
+                  font-size: 16px; }
+                  #user main section .record .contents .left .wrapper .desc ul li div.first svg {
+                    vertical-align: middle;
+                    margin-right: 8px; }
+                #user main section .record .contents .left .wrapper .desc ul li div.last {
+                  flex: 0.9;
+                  text-align: right; }
+                  #user main section .record .contents .left .wrapper .desc ul li div.last .val {
+                    font-size: 16px; }
+                  #user main section .record .contents .left .wrapper .desc ul li div.last .rate {
+                    margin-top: 2px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #999999; }
+          #user main section .record .contents .left .none {
+            text-align: center; }
+            #user main section .record .contents .left .none .top {
+              font-size: 18px; }
+            #user main section .record .contents .left .none .img {
+              margin-top: 37px; }
+            #user main section .record .contents .left .none .ready {
+              font-size: 24px;
+              color: #e06e8a; }
+            #user main section .record .contents .left .none .ready-desc {
+              font-size: 13px;
+              color: #ce95a2; }
+        #user main section .record .contents .right {
+          width: 100%;
+          height: 100%;
+          padding: 34px 24px 40px 24px;
+          border-radius: 10px;
+          background-color: #fff; }
+          #user main section .record .contents .right .wrapper {
+            width: 100%; }
+            #user main section .record .contents .right .wrapper .top {
+              font-size: 1.8em; }
+              #user main section .record .contents .right .wrapper .top .atleast {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 13px; }
+                #user main section .record .contents .right .wrapper .top .atleast span {
+                  position: relative;
+                  margin-left: 6px; }
+                  #user main section .record .contents .right .wrapper .top .atleast span:nth-child(2) {
+                    margin-right: 10px; }
+                    #user main section .record .contents .right .wrapper .top .atleast span:nth-child(2):after {
+                      content: "";
+                      position: absolute;
+                      display: inline-block;
+                      top: 5px;
+                      left: 40px;
+                      width: 1px;
+                      height: 10px;
+                      background-color: #eee; }
+                  #user main section .record .contents .right .wrapper .top .atleast span.blue {
+                    color: #23b9ff; }
+    #user main section .matches {
+      margin: 20px auto;
+      padding: 0px 20px 0px 20px;
+      max-width: 1280px; }
+      #user main section .matches .contents {
+        border-radius: 10px;
+        background-color: #fff; }
+        #user main section .matches .contents .tabs {
+          height: 65px;
+          border-bottom: 1px solid #eee;
+          text-align: center;
+          font-size: 1.8em;
+          color: #999999; }
+          #user main section .matches .contents .tabs span {
+            display: inline-block;
+            width: 55px;
+            line-height: 65px;
+            cursor: pointer; }
+            #user main section .matches .contents .tabs span.active {
+              color: #000;
+              border-bottom: 1px solid #000; }
+            #user main section .matches .contents .tabs span:hover {
+              color: #000;
+              border-bottom: 1px solid #000; }
+        #user main section .matches .contents .karttab {
+          display: none;
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding: 52px 24px 5px 24px; }
+          #user main section .matches .contents .karttab.active {
+            display: flex; }
+          #user main section .matches .contents .karttab .first {
+            flex: 1;
+            text-align: center; }
+            #user main section .matches .contents .karttab .first .top .kart-rank span {
+              display: inline-block;
+              box-sizing: border-box;
+              height: 26px;
+              line-height: 26px;
+              padding-left: 10px;
+              padding-right: 10px;
+              font-size: 1.4em;
+              border-radius: 6px;
+              background-color: #23b9ff;
+              color: #fff; }
+            #user main section .matches .contents .karttab .first .top .kart-name {
+              font-size: 2.4em; }
+            #user main section .matches .contents .karttab .first .top .kart-img img {
+              margin-top: 24px;
+              width: 160px;
+              text-align: center; }
+            #user main section .matches .contents .karttab .first .bottom ul li {
+              position: relative;
+              height: 60px;
+              line-height: 60px;
+              font-size: 1.4em;
+              text-align: left;
+              border-bottom: 1px solid #f7f7f7; }
+              #user main section .matches .contents .karttab .first .bottom ul li img {
+                width: 30px;
+                vertical-align: middle;
+                margin-right: 8px; }
+              #user main section .matches .contents .karttab .first .bottom ul li span {
+                position: absolute;
+                top: 0px;
+                right: 0px; }
+          #user main section .matches .contents .karttab .second {
+            flex: 1; }
+          #user main section .matches .contents .karttab .select {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            padding-left: 22px;
+            border-radius: 10px;
+            border: solid 1px #cccccc;
+            background-color: #ffffff;
+            font-size: 1.6em; }
+            #user main section .matches .contents .karttab .select i {
+              font-size: 14px;
+              position: absolute;
+              top: 22px;
+              right: 18px; }
+            #user main section .matches .contents .karttab .select.active {
+              background-color: #f7f7f7; }
+            #user main section .matches .contents .karttab .select:hover {
+              background-color: #f7f7f7; }
+        #user main section .matches .contents .tracktab {
+          display: none;
+          padding: 50px 37px 5px 37px; }
+          #user main section .matches .contents .tracktab.active {
+            display: block; }
+          #user main section .matches .contents .tracktab .avg {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px; }
+            #user main section .matches .contents .tracktab .avg span {
+              color: #23b9ff;
+              margin-left: 3px; }
+          #user main section .matches .contents .tracktab ul li {
+            margin-bottom: 14px; }
+            #user main section .matches .contents .tracktab ul li:last-child {
+              margin-bottom: 0px; }
+            #user main section .matches .contents .tracktab ul li .track-desc {
+              position: relative;
+              max-width: 100%;
+              padding: 30px 24px;
+              border-radius: 10px;
+              background-color: #fafafa;
+              font-size: 14px; }
+              #user main section .matches .contents .tracktab ul li .track-desc div {
+                margin-bottom: 10px; }
+                #user main section .matches .contents .tracktab ul li .track-desc div:last-child {
+                  margin-bottom: 0px; }
+              #user main section .matches .contents .tracktab ul li .track-desc .track-name {
+                font-size: 16px;
+                margin-bottom: 18px; }
+              #user main section .matches .contents .tracktab ul li .track-desc span {
+                color: #666666;
+                margin-right: 15px; }
+              #user main section .matches .contents .tracktab ul li .track-desc img {
+                position: absolute;
+                right: 24px;
+                bottom: 30px;
+                width: 80px; }
+        #user main section .matches .contents .list {
+          padding: 55px 37px 55px 37px; }
+          #user main section .matches .contents .list .top {
+            display: flex;
+            padding-bottom: 20px;
+            font-size: 1.8em;
+            line-height: 27px;
+            border-bottom: 1px solid #ddd; }
+            #user main section .matches .contents .list .top .sub {
+              flex: 1;
+              font-size: 13px;
+              text-align: right;
+              color: #999999; }
+              #user main section .matches .contents .list .top .sub i {
+                margin-left: 19px;
+                font-size: 10px; }
+                #user main section .matches .contents .list .top .sub i.blue {
+                  color: #23b9ff; }
+                #user main section .matches .contents .list .top .sub i.yellow {
+                  color: #ffc95e; }
+                #user main section .matches .contents .list .top .sub i.pink {
+                  color: #fd446e; }
+              #user main section .matches .contents .list .top .sub span {
+                margin-left: 5px; }
+          #user main section .matches .contents .list ul li.match {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            font-size: 1.6em;
+            font-weight: 400;
+            color: #666666;
+            border-bottom: 1px solid #eee; }
+            #user main section .matches .contents .list ul li.match .rank {
+              position: relative;
+              flex: 2;
+              text-align: center; }
+              #user main section .matches .contents .list ul li.match .rank.blue {
+                color: #23b9ff; }
+              #user main section .matches .contents .list ul li.match .rank.yellow {
+                color: #ffc95e; }
+              #user main section .matches .contents .list ul li.match .rank.pink {
+                color: #fd446e; }
+              #user main section .matches .contents .list ul li.match .rank div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }
+                #user main section .matches .contents .list ul li.match .rank div i {
+                  font-size: 10px; }
+            #user main section .matches .contents .list ul li.match .when {
+              display: none; }
+            #user main section .matches .contents .list ul li.match .map {
+              flex: 4;
+              text-align: right; }
+              #user main section .matches .contents .list ul li.match .map .mobile {
+                margin-top: 11px;
+                font-size: 13px; }
+                #user main section .matches .contents .list ul li.match .map .mobile span {
+                  position: relative;
+                  margin-left: 13px; }
+                  #user main section .matches .contents .list ul li.match .map .mobile span:nth-child(1):after {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    top: 5px;
+                    right: -8px;
+                    width: 0.5px;
+                    height: 10px;
+                    background-color: #666666; }
+            #user main section .matches .contents .list ul li.match .time {
+              display: none; }
+            #user main section .matches .contents .list ul li.match .kartname {
+              display: none; }
+            #user main section .matches .contents .list ul li.match .spread {
+              position: relative;
+              flex: 1;
+              text-align: center;
+              cursor: pointer; }
+              #user main section .matches .contents .list ul li.match .spread div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .3s ease; }
+                #user main section .matches .contents .list ul li.match .spread div i {
+                  font-size: 14px; }
+            #user main section .matches .contents .list ul li.match.active {
+              color: #000;
+              padding-bottom: 0px; }
+              #user main section .matches .contents .list ul li.match.active .spread div {
+                transform: rotate(180deg);
+                transform-origin: 35% 30%; }
+              #user main section .matches .contents .list ul li.match.active .detail {
+                display: block;
+                width: 100%;
+                padding-top: 24px;
+                overflow-x: scroll;
+                overflow-y: hidden; }
+                #user main section .matches .contents .list ul li.match.active .detail ul {
+                  width: 910px;
+                  display: flex; }
+                  #user main section .matches .contents .list ul li.match.active .detail ul li {
+                    width: 130px;
+                    height: 200px;
+                    background-color: #f7f7f7; }
+                    #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper {
+                      display: inline; }
+                      #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div {
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #666666; }
+                        #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.kart {
+                          margin-top: 34px; }
+                        #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.result {
+                          margin-top: 16px; }
+                          #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.result span {
+                            display: inline-block;
+                            box-sizing: border-box;
+                            height: 24px;
+                            line-height: 24px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            font-size: 12px;
+                            border: 1px solid #ffc95e;
+                            border-radius: 12px;
+                            background-color: #fff;
+                            color: #ffc95e; }
+                            #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.result span.win {
+                              color: #23b9ff;
+                              border-color: #23b9ff; }
+                            #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.result span.retire {
+                              color: #fd446e;
+                              border-color: #fd446e; }
+                        #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.nick {
+                          margin-top: 12px;
+                          margin-bottom: 3px; }
+                    #user main section .matches .contents .list ul li.match.active .detail ul li.active {
+                      background-color: #fff; }
+                      #user main section .matches .contents .list ul li.match.active .detail ul li.active .wrapper div {
+                        color: #000 !important; }
+            #user main section .matches .contents .list ul li.match:hover {
+              color: #000; }
+              #user main section .matches .contents .list ul li.match:hover .spread div {
+                transform: rotate(180deg);
+                transform-origin: 35% 30%; }
+            #user main section .matches .contents .list ul li.match .detail {
+              display: none; }
+  #user footer {
+    margin-top: 41px;
+    text-align: center; }
+    #user footer .logos {
+      height: 20px;
+      line-height: 20px; }
+      #user footer .logos .nexon {
+        width: 63px;
+        vertical-align: middle; }
+      #user footer .logos i {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+        vertical-align: middle; }
+      #user footer .logos .labs {
+        width: 74px;
+        object-fit: contain;
+        vertical-align: middle; }
+    #user footer .policy {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #666666; }
+    #user footer .copy {
+      margin-top: 4px;
+      margin-bottom: 44px;
+      font-size: 11px;
+      color: #bbb; }
+  #user .raise {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 24px;
+    background-color: #fff;
+    transition: transform .5s ease-in-out;
+    transform: translate(0px, 812px);
+    z-index: 9; }
+    #user .raise .wrapper {
+      position: relative;
+      padding: 52px 24px 45px 24px; }
+      #user .raise .wrapper .bar {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 36px;
+        height: 5px;
+        border-radius: 3px;
+        background-color: #eaecef; }
+      #user .raise .wrapper .close {
+        position: absolute;
+        top: 29px;
+        right: 24px;
+        font-size: 20px; }
+      #user .raise .wrapper .top {
+        font-size: 1.8em; }
+      #user .raise .wrapper ul {
+        margin-top: 30px;
+        font-size: 1.6em; }
+    #user .raise.active {
+      transform: translate(0px, 0px); }
+  @media only screen and (min-width: 769px) {
+    #user .mobile {
+      display: none; }
+    #user .desktop {
+      display: block; }
+    #user header, #user .sticky {
+      padding-top: 6px;
+      min-width: 375px;
+      height: 60px;
+      background-color: #fff; }
+      #user header .contents, #user .sticky .contents {
+        position: relative;
+        line-height: 60px; }
+        #user header .contents .tmi, #user .sticky .contents .tmi {
+          width: initial;
+          height: initial; }
+        #user header .contents .menu-center, #user .sticky .contents .menu-center {
+          position: absolute;
+          top: 0px;
+          left: 50%;
+          font-size: 16px;
+          transform: translate(-50%, 0%); }
+          #user header .contents .menu-center ul, #user .sticky .contents .menu-center ul {
+            display: flex; }
+            #user header .contents .menu-center ul li, #user .sticky .contents .menu-center ul li {
+              margin-left: 70px;
+              font-weight: 400;
+              cursor: pointer; }
+              #user header .contents .menu-center ul li:first-child, #user .sticky .contents .menu-center ul li:first-child {
+                margin-left: 0px; }
+              #user header .contents .menu-center ul li.active, #user .sticky .contents .menu-center ul li.active {
+                font-weight: bold; }
+              #user header .contents .menu-center ul li:hover, #user .sticky .contents .menu-center ul li:hover {
+                font-weight: bold; }
+          #user header .contents .menu-center .underbar, #user .sticky .contents .menu-center .underbar {
+            position: absolute;
+            top: 42px;
+            left: 0px;
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background-color: #000;
+            transition: left .3s ease-in; }
+            #user header .contents .menu-center .underbar.rank, #user .sticky .contents .menu-center .underbar.rank {
+              left: calc(30px + 70px); }
+            #user header .contents .menu-center .underbar.kart, #user .sticky .contents .menu-center .underbar.kart {
+              left: calc(30px + 70px + 30px + 70px); }
+            #user header .contents .menu-center .underbar.track, #user .sticky .contents .menu-center .underbar.track {
+              left: calc(30px + 70px + 30px + 70px + 30px + 70px); }
+    #user main .title {
+      height: calc(306px - 60px); }
+      #user main .title .name {
+        position: relative;
+        padding: 0px;
+        padding-top: calc(187px - 60px); }
+        #user main .title .name .lv .level {
+          font-size: 16px; }
+        #user main .title .name .lv .nickname {
+          font-size: 48px; }
+        #user main .title .name .sub {
+          position: absolute;
+          top: calc(306px - 60px);
+          margin-top: 81px; }
+        #user main .title .name .share {
+          position: absolute;
+          top: calc(306px - 60px);
+          right: 0px;
+          margin-top: 28px; }
+          #user main .title .name .share ul li span.desktop {
+            display: inline; }
+        #user main .title .name .searchbar {
+          position: absolute;
+          top: calc(306px - 218px + 60px + 6px);
+          right: 0px;
+          width: 180px;
+          height: 40px;
+          border-radius: 25px;
+          background-color: #f6f6f6; }
+          #user main .title .name .searchbar input {
+            margin-top: 9px;
+            width: 127px;
+            height: 19px;
+            line-height: 19px;
+            padding-left: 16px;
+            outline: 0;
+            border: 0;
+            display: block;
+            font-size: 14px;
+            color: #000;
+            background: transparent;
+            font-family: "Noto Sans KR"; }
+          #user main .title .name .searchbar button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            transition: all .3 ease; }
+            #user main .title .name .searchbar button:hover {
+              animation: searching 0.7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+    @keyframes searching {
+      0% {
+        transform: rotate(0deg); }
+      20% {
+        transform: rotate(40deg); }
+      75% {
+        transform: rotate(-20deg); }
+      100% {
+        transform: rotate(0deg); } }
+      #user main .title .thumbnail {
+        top: calc(100px - 60px);
+        right: 50%;
+        width: 410px;
+        height: 410px;
+        border-radius: 206px;
+        transform: translate(50%, 0%); }
+        #user main .title .thumbnail .profile {
+          margin-top: -180px;
+          margin-left: -153px;
+          width: 306px;
+          height: 332px; }
+    #user main section {
+      margin-top: 334px; }
+      #user main section .mode {
+        top: calc(-29px - 32px);
+        font-size: 20px; }
+        #user main section .mode ul li:first-child::after {
+          margin-left: 15px; }
+        #user main section .mode ul li:nth-child(2) {
+          margin-left: 25px; }
+      #user main section .summary .contents .left {
+        flex: 1; }
+        #user main section .summary .contents .left .total {
+          padding-bottom: 18px;
+          border-bottom: 1px solid #f7f7f7; }
+          #user main section .summary .contents .left .total .small {
+            font-size: 16px; }
+          #user main section .summary .contents .left .total .big {
+            font-size: 30px; }
+        #user main section .summary .contents .left .platform {
+          margin-top: 20px;
+          line-height: 30px;
+          font-size: 1.4em; }
+          #user main section .summary .contents .left .platform ul {
+            position: relative;
+            display: flex;
+            align-self: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: 145px; }
+            #user main section .summary .contents .left .platform ul li {
+              margin-bottom: 16px; }
+              #user main section .summary .contents .left .platform ul li img {
+                vertical-align: middle;
+                width: 30px; }
+              #user main section .summary .contents .left .platform ul li span {
+                margin-left: 6px;
+                color: #23b9ff; }
+      #user main section .summary .contents .right {
+        flex: 3;
+        display: flex;
+        padding-top: 15px; }
+        #user main section .summary .contents .right .chart {
+          flex: 1;
+          text-align: center; }
+          #user main section .summary .contents .right .chart .draw {
+            margin-right: 32.5px;
+            margin-left: 32.5px; }
+            #user main section .summary .contents .right .chart .draw .progress-bar__background {
+              stroke-width: 1.5; }
+            #user main section .summary .contents .right .chart .draw .progress-bar__progress {
+              stroke-width: 1.5; }
+            #user main section .summary .contents .right .chart .draw .icons img {
+              width: initial; }
+            #user main section .summary .contents .right .chart .draw .icons .desktop {
+              font-size: 1.8em; }
+      #user main section .record .contents .left {
+        flex: 1;
+        margin-bottom: 0px;
+        margin-right: 20px; }
+        #user main section .record .contents .left .wrapper .top {
+          font-size: 16px; }
+        #user main section .record .contents .left .wrapper .desc ul {
+          margin-top: 6px; }
+          #user main section .record .contents .left .wrapper .desc ul li div.first {
+            font-size: 14px; }
+          #user main section .record .contents .left .wrapper .desc ul li div.last .val {
+            font-size: 14px; }
+          #user main section .record .contents .left .wrapper .desc ul li div.last .rate {
+            font-size: 12px; }
+        #user main section .record .contents .left .none .top {
+          font-size: 16px; }
+      #user main section .record .contents .right {
+        flex: 2; }
+        #user main section .record .contents .right .wrapper .top {
+          display: flex;
+          font-size: 16px; }
+          #user main section .record .contents .right .wrapper .top .atleast {
+            flex: 1;
+            margin-top: 0px;
+            line-height: 27px;
+            text-align: right; }
+      #user main section .matches .contents .tabs {
+        height: 62px;
+        font-size: 1.6em; }
+        #user main section .matches .contents .tabs span {
+          display: inline-block;
+          width: 52px;
+          line-height: 62px;
+          cursor: pointer; }
+      #user main section .matches .contents .karttab {
+        padding: 50px 38px 5px 38px; }
+        #user main section .matches .contents .karttab .first {
+          padding: 34px 32px 34px 32px;
+          background-color: #fafafa;
+          border-radius: 10px 0px 0px 10px; }
+          #user main section .matches .contents .karttab .first .top .kart-img img {
+            margin-top: 0px; }
+          #user main section .matches .contents .karttab .first .top .kart-rank {
+            text-align: left; }
+          #user main section .matches .contents .karttab .first .top .kart-name {
+            text-align: left; }
+          #user main section .matches .contents .karttab .first .bottom ul li {
+            height: 40px;
+            line-height: 40px; }
+        #user main section .matches .contents .karttab .second {
+          padding: 34px 32px 34px 32px;
+          background-color: #fafafa;
+          border-radius: 0px 10px 10px 0px; }
+          #user main section .matches .contents .karttab .second ul li {
+            position: relative;
+            height: 66px;
+            line-height: 66px;
+            margin-bottom: 6px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            font-size: 14px; }
+            #user main section .matches .contents .karttab .second ul li .checkbox {
+              position: relative;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              margin-left: 22px;
+              vertical-align: middle;
+              background-color: #e7e7e7;
+              border-radius: 10px; }
+              #user main section .matches .contents .karttab .second ul li .checkbox span {
+                display: none; }
+            #user main section .matches .contents .karttab .second ul li img {
+              width: 40px;
+              vertical-align: middle;
+              margin-right: 14px;
+              margin-left: 14px; }
+            #user main section .matches .contents .karttab .second ul li .desc {
+              position: absolute;
+              top: 0px;
+              right: 22px;
+              display: inline;
+              color: #666; }
+            #user main section .matches .contents .karttab .second ul li.active {
+              background-color: #fff;
+              box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.07); }
+              #user main section .matches .contents .karttab .second ul li.active .checkbox span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background-color: #23b9ff;
+                border-radius: 6px; }
+            #user main section .matches .contents .karttab .second ul li:hover {
+              background-color: #fff;
+              box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.07); }
+      #user main section .matches .contents .tracktab {
+        padding: 30px 42px 5px 42px; }
+        #user main section .matches .contents .tracktab .avg {
+          margin-bottom: 24px; }
+          #user main section .matches .contents .tracktab .avg span {
+            margin-left: 7px; }
+        #user main section .matches .contents .tracktab ul {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap; }
+          #user main section .matches .contents .tracktab ul li {
+            flex: 1;
+            min-width: calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 20px; }
+            #user main section .matches .contents .tracktab ul li .track-desc {
+              padding: 34px 34px 98px 34px; }
+              #user main section .matches .contents .tracktab ul li .track-desc div {
+                margin-bottom: 8px; }
+              #user main section .matches .contents .tracktab ul li .track-desc .track-name {
+                font-size: 18px;
+                margin-bottom: 20px; }
+              #user main section .matches .contents .tracktab ul li .track-desc span {
+                margin-right: 10px; }
+              #user main section .matches .contents .tracktab ul li .track-desc img {
+                right: 29px;
+                bottom: 30px; }
+      #user main section .matches .contents .list ul li.match {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 1.4em; }
+        #user main section .matches .contents .list ul li.match .rank {
+          flex: 1;
+          text-align: center; }
+        #user main section .matches .contents .list ul li.match .when {
+          flex: 1;
+          display: block; }
+        #user main section .matches .contents .list ul li.match .map {
+          flex: 3;
+          text-align: left; }
+          #user main section .matches .contents .list ul li.match .map .name {
+            line-height: 100px;
+            font-size: 1em; }
+        #user main section .matches .contents .list ul li.match .time {
+          flex: 1;
+          display: block; }
+        #user main section .matches .contents .list ul li.match .kartname {
+          flex: 2;
+          display: block; }
+          #user main section .matches .contents .list ul li.match .kartname .kart img {
+            vertical-align: middle;
+            margin-right: 16px; }
+          #user main section .matches .contents .list ul li.match .kartname .name {
+            vertical-align: middle; }
+        #user main section .matches .contents .list ul li.match .spread {
+          flex: 1;
+          text-align: center;
+          cursor: pointer; }
+        #user main section .matches .contents .list ul li.match.active {
+          color: #000;
+          height: 300px; }
+          #user main section .matches .contents .list ul li.match.active .spread div {
+            transform: rotate(180deg);
+            transform-origin: 25% 25%; }
+          #user main section .matches .contents .list ul li.match.active .detail {
+            padding-top: 0px;
+            line-height: 14px;
+            overflow-x: hidden; }
+            #user main section .matches .contents .list ul li.match.active .detail ul {
+              width: 100%; }
+              #user main section .matches .contents .list ul li.match.active .detail ul li {
+                flex: 1;
+                height: 204px; }
+                #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.kart {
+                  margin-top: 38px; }
+                #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.result {
+                  margin-top: 22px; }
+                #user main section .matches .contents .list ul li.match.active .detail ul li .wrapper div.nick {
+                  margin-top: 9px; }
+        #user main section .matches .contents .list ul li.match:hover {
+          color: #000; }
+          #user main section .matches .contents .list ul li.match:hover .spread div {
+            transform: rotate(180deg);
+            transform-origin: 25% 25%; }
+    #user footer {
+      margin-top: 50px; }
+      #user footer .policy {
+        margin-top: 22px;
+        font-size: 12px; }
+      #user footer .copy {
+        margin-top: 7px;
+        margin-bottom: 258px;
+        font-size: 12px; } }

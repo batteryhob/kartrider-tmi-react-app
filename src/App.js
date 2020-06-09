@@ -13,13 +13,11 @@ class App extends Component {
     let { location } = this.props;
 
     return (
-      <div className="App">
-        <Switch location={location}>
-          <Route exact path="/" component={Main}/>
-          <Route exact path="/user" component={User}/> 
-          <Route component={NoMatch}/>
-        </Switch>
-      </div>
+      <Switch location={location}>
+        <Route exact path="/" component={Main}/>
+        <Route exact path="/user" component={User}/> 
+        <Route component={NoMatch}/>
+      </Switch>
     )
     
   }
