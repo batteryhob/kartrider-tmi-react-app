@@ -445,7 +445,37 @@ html, body {
         width: 100%;
         top: 36px;
         left: 0px;
-        z-index: 1; }
+        z-index: 3; }
+      #main main section .search.active .searchbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0px;
+        padding-top: 85px;
+        border-radius: 0px;
+        box-shadow: none;
+        z-index: 2; }
+        #main main section .search.active .searchbar .current {
+          display: block;
+          padding-left: 20px;
+          text-align: left;
+          border-top: 1px solid #ddd;
+          background-color: #fff; }
+          #main main section .search.active .searchbar .current .desc {
+            font-size: 12px;
+            color: #bbb;
+            height: 62px;
+            line-height: 62px; }
+          #main main section .search.active .searchbar .current ul li {
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #666666; }
+            #main main section .search.active .searchbar .current ul li:last-child {
+              margin-bottom: 100px; }
       #main main section .search .searchbar {
         margin: 0 auto;
         margin-top: 28px;
@@ -457,37 +487,10 @@ html, body {
         background-color: #fff;
         color: #000;
         transition: all .3s ease-in; }
-        #main main section .search .searchbar.active {
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          width: 100%;
-          max-width: 100%;
-          margin-top: 0px;
-          padding-top: 85px;
-          border-radius: 0px;
-          box-shadow: none; }
-          #main main section .search .searchbar.active .current {
-            display: block;
-            padding-left: 20px;
-            text-align: left;
-            border-top: 1px solid #ddd;
-            background-color: #fff; }
-            #main main section .search .searchbar.active .current .desc {
-              font-size: 12px;
-              color: #bbb;
-              height: 62px;
-              line-height: 62px; }
-            #main main section .search .searchbar.active .current ul li {
-              height: 50px;
-              line-height: 50px;
-              font-size: 14px;
-              font-weight: 300;
-              color: #666666; }
-              #main main section .search .searchbar.active .current ul li:last-child {
-                margin-bottom: 100px; }
         #main main section .search .searchbar form {
-          padding: 23px 20px; }
+          padding: 23px 20px;
+          background-color: #fff;
+          border-radius: 10px; }
           #main main section .search .searchbar form .contents {
             display: flex;
             height: 24px; }
@@ -708,25 +711,25 @@ html, body {
         display: none; }
       #main main section .search.active .subtitle {
         display: none; }
+      #main main section .search.active .searchbar {
+        position: static;
+        margin: 0 auto;
+        margin-top: 42px;
+        padding-top: 0px;
+        max-width: 760px;
+        height: 90px;
+        border-radius: 10px 10px 0px 0px;
+        box-sizing: border-box;
+        box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
+        #main main section .search.active .searchbar .dao {
+          display: none; }
+        #main main section .search.active .searchbar .current {
+          border-radius: 0px 0px 10px 10px;
+          box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
       #main main section .search .searchbar {
         margin-top: 42px;
         max-width: 760px;
         height: 90px; }
-        #main main section .search .searchbar.active {
-          position: static;
-          margin: 0 auto;
-          margin-top: 42px;
-          padding-top: 0px;
-          max-width: 760px;
-          height: 90px;
-          border-radius: 10px 10px 0px 0px;
-          box-sizing: border-box;
-          box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
-          #main main section .search .searchbar.active .dao {
-            display: none; }
-          #main main section .search .searchbar.active .current {
-            border-radius: 0px 0px 10px 10px;
-            box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
         #main main section .search .searchbar form {
           padding: 31px; }
           #main main section .search .searchbar form .contents {
