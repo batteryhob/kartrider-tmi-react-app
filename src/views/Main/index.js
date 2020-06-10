@@ -7,6 +7,9 @@ import Searchbar from './components/Searchbar';
 
 import './main.css'
 
+// the hoc
+import { withTranslation } from 'react-i18next';
+
 class Main extends Component {
 
   constructor(props) {
@@ -31,29 +34,28 @@ class Main extends Component {
   }
 
   render () {
+    let { t } = this.props;
     let { active } = this.state;
     return (
         <div id="main">
-          <Header menu1='검색' menu2='랭킹' menu3='카트' menu4='트랙'/>
+          <Header history={this.props.history}/>
             <main>
               <Bgs/>
               <section>
                 <div className={ active ? 'search active' : 'search' }>
                     <div className="txt">
                         <div className="helloworld">
-                            전적검색
+                            {t('main.helloworld')}
                         </div>
                     </div>
                     <div className="visual">
-                        <img src="/img/bitmap-copy.png"
-                        srcSet="/img/bitmap-copy@2x.png 2x,
-                                /img/bitmap-copy@3x.png 3x"
-                                className="Bitmap-Copy" />               
+                        <img src="/img/bitmap-copy.png" srcSet="/img/bitmap-copy@2x.png 2x, /img/bitmap-copy@3x.png 3x" className="Bitmap-Copy" alt="logo"/>               
                     </div>
                     <div className="subtitle">
-                        <div></div>
-                    </div>
-                    <Searchbar activeCheck={ this.activeCheck }/>
+                        Dynamic Action Racing Nexon Game
+                    </div> 
+                    <Searchbar activeCheck={ this.activeCheck } history={this.props.history}/>
+                    <div className="cover"></div>  
                 </div>
               </section>
             </main>
@@ -63,4 +65,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default withTranslation()(Main);

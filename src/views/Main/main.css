@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* app.sass */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani");
 html,
 body,
 div,
@@ -163,43 +165,7 @@ input[type="text"]::-ms-reveal {
 input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
-/*font style asset*/
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype"); }
-
+/* 구글 웹 폰트 적용 */
 .svg-icon-important-ver-2-14, .svg-icon-share-14, .svg-icon-tmi-checkflag-01, .svg-icon-tmi-sademotion-01, .svg-icon-tmi-trophy-01, .svg-icon-view-14 {
   background: url("/svg/sprite.css-7b813607.svg") no-repeat; }
 
@@ -245,13 +211,12 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   width: 18px;
   height: 18px; }
 
-html, body {
+html {
   width: 100%;
   height: 100%;
   font-family: "Noto Sans KR";
   font-size: 10px;
-  font-weight: 500;
-  overflow-x: hidden; }
+  font-weight: 500; }
 
 .mobile {
   display: block; }
@@ -261,10 +226,12 @@ html, body {
 
 #main {
   background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
   /* app.sass */ }
   #main header {
     position: relative;
-    min-width: 375px;
+    min-width: 320px;
     height: 60px;
     z-index: 2; }
     #main header .contents {
@@ -277,8 +244,11 @@ html, body {
         margin-left: 20px; }
       #main header .contents .menu-right {
         position: absolute;
-        top: 5px;
-        right: 20px; }
+        top: 20px;
+        right: 20px;
+        cursor: pointer; }
+        #main header .contents .menu-right .homepage {
+          display: none; }
   #main main {
     position: relative; }
     #main main .bg-left-top {
@@ -432,20 +402,27 @@ html, body {
             z-index: -1; }
       #main main section .search .visual {
         margin: 0 auto;
-        margin-top: 7px; }
+        margin-top: 12px; }
         #main main section .search .visual img {
-          width: 210px;
-          height: 70px; }
-      #main main section .search .subtitle div {
-        display: inline-block;
-        width: 200px;
-        height: 10px; }
+          width: 170px;
+          height: auto; }
+      #main main section .search .subtitle {
+        margin-top: 15px;
+        font-family: Rajdhani;
+        font-size: 13px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.36px;
+        text-align: center;
+        color: #3284a5; }
       #main main section .search.active .txt {
         position: fixed;
         width: 100%;
         top: 36px;
         left: 0px;
-        z-index: 3; }
+        z-index: 5; }
       #main main section .search.active .searchbar {
         position: fixed;
         top: 0px;
@@ -456,10 +433,13 @@ html, body {
         padding-top: 85px;
         border-radius: 0px;
         box-shadow: none;
-        z-index: 2; }
+        z-index: 4; }
+        #main main section .search.active .searchbar form {
+          border-radius: 0px; }
         #main main section .search.active .searchbar .current {
           display: block;
           padding-left: 20px;
+          padding-right: 20px;
           text-align: left;
           border-top: 1px solid #ddd;
           background-color: #fff; }
@@ -468,14 +448,34 @@ html, body {
             color: #bbb;
             height: 62px;
             line-height: 62px; }
-          #main main section .search.active .searchbar .current ul li {
-            height: 50px;
-            line-height: 50px;
-            font-size: 14px;
-            font-weight: 300;
-            color: #666666; }
-            #main main section .search.active .searchbar .current ul li:last-child {
-              margin-bottom: 100px; }
+          #main main section .search.active .searchbar .current ul {
+            padding-bottom: 100px; }
+            #main main section .search.active .searchbar .current ul li {
+              position: relative;
+              height: 50px;
+              line-height: 50px;
+              font-size: 14px;
+              font-weight: 300;
+              color: #666666; }
+              #main main section .search.active .searchbar .current ul li img {
+                position: absolute;
+                top: 14px;
+                right: 0px;
+                width: 12px;
+                height: 12px;
+                cursor: pointer; }
+              #main main section .search.active .searchbar .current ul li:hover {
+                background-color: #f6f6f6; }
+      #main main section .search.active .cover {
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.2;
+        background-color: #000000; }
       #main main section .search .searchbar {
         margin: 0 auto;
         margin-top: 28px;
@@ -565,6 +565,8 @@ html, body {
                 vertical-align: middle; }
         #main main section .search .searchbar .current {
           display: none; }
+      #main main section .search .cover {
+        display: none; }
   #main footer {
     position: relative;
     z-index: 2; }
@@ -577,10 +579,11 @@ html, body {
         #main footer .wrapper .logos .nexon {
           width: 63px;
           vertical-align: middle; }
-        #main footer .wrapper .logos i {
+        #main footer .wrapper .logos .close {
           margin-left: 5px;
           margin-right: 5px;
-          font-size: 10px;
+          width: 10px;
+          height: 10px;
           vertical-align: middle; }
         #main footer .wrapper .logos .labs {
           width: 74px;
@@ -601,7 +604,6 @@ html, body {
       display: block; }
     #main header {
       padding-top: 6px;
-      min-width: 375px;
       height: 60px;
       background-color: transparent; }
       #main header .contents {
@@ -609,7 +611,8 @@ html, body {
         line-height: 60px; }
         #main header .contents .tmi {
           width: initial;
-          height: initial; }
+          height: initial;
+          margin-left: 42px; }
         #main header .contents .menu-center {
           position: absolute;
           top: 0px;
@@ -643,6 +646,31 @@ html, body {
               left: calc(30px + 70px + 30px + 70px); }
             #main header .contents .menu-center .underbar.track {
               left: calc(30px + 70px + 30px + 70px + 30px + 70px); }
+        #main header .contents .menu-right {
+          line-height: 30px;
+          right: 42px; }
+          #main header .contents .menu-right .homepage {
+            display: inline-block;
+            height: 30px; }
+            #main header .contents .menu-right .homepage span {
+              margin-right: 5px;
+              font-family: Rajdhani;
+              font-size: 16px;
+              font-weight: 500;
+              color: #000;
+              vertical-align: middle; }
+            #main header .contents .menu-right .homepage .arrow {
+              position: relative;
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              background-color: #25bafe;
+              border-radius: 7px;
+              vertical-align: middle; }
+              #main header .contents .menu-right .homepage .arrow img {
+                position: absolute;
+                top: 3px;
+                left: 3px; }
     #main main .bg-left-top {
       top: -66px;
       left: 0px;
@@ -699,8 +727,18 @@ html, body {
         max-width: 760px;
         margin-top: 20px; }
         #main main section .search .visual img {
-          width: 375px;
-          height: 123px; }
+          width: 335px;
+          height: auto; }
+      #main main section .search .subtitle {
+        font-family: Rajdhani;
+        font-size: 21px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.2px;
+        text-align: center;
+        color: #3284a5; }
       #main main section .search.active .txt {
         position: relative;
         width: initial;
@@ -723,9 +761,20 @@ html, body {
         box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
         #main main section .search.active .searchbar .dao {
           display: none; }
+        #main main section .search.active .searchbar form {
+          border-radius: 10px 10px 0px 0px; }
         #main main section .search.active .searchbar .current {
           border-radius: 0px 0px 10px 10px;
           box-shadow: 8px 8px 15px 5px rgba(48, 191, 239, 0.26); }
+          #main main section .search.active .searchbar .current ul li img {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 14px;
+            height: 14px;
+            cursor: pointer; }
+      #main main section .search.active .cover {
+        display: none; }
       #main main section .search .searchbar {
         margin-top: 42px;
         max-width: 760px;

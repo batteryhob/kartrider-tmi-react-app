@@ -1,49 +1,47 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
-function Title() {
+function Title(props) {
   return (
     <div className="title">
         <div className="name">
             <div className="lv">
                 <div className="level">
-                    <p>LV.99</p>
+                    <p>LV.{ props.lv }</p>
                 </div>
                 <div className="nickname">
-                    <p>Stella동댜S</p>
+                     <p>{ props.nick }</p>
                 </div>
             </div>
             <div className="sub">
                 <div className="point">
-                    <p>누적포인트<span>1,000PT</span></p>
+                    <p>{props.t('user.title.point')}<span>{ props.pt }PT</span></p>
                 </div>
                 <div className="rank">
-                    <p>순위<span>1위</span></p>
+                    <p>{props.t('user.title.rank')}<span>{ props.rank }.</span></p>
                 </div>
             </div>
             <div className="share">
                 <ul>
                     <li>
-                        <i className="svg-icon svg-icon-share-14 svg-icon-share-14-dims">
-                        </i>
-                        <span className="desktop">공유하기</span>
+                        <img src="/img/icon-share-14.svg" alt="share"/>
+                        <span className="desktop">{props.t('user.title.share')}</span>
                     </li>
                     <li>
-                        <i className="svg-icon svg-icon-important-ver-2-14 svg-icon-important-ver-2-14-dims">
-                        </i>
-                        <span className="desktop">신고하기</span>
+                        <img src="/img/icon-important-ver-2-14.svg" alt="report"/>
+                        <span className="desktop">{props.t('user.title.report')}</span>
                     </li>
                     <li>
-                        <i className="svg-icon svg-icon-view-14 svg-icon-view-14-dims">
-                        </i>
-                        <span>12</span>
+                        <img src="/img/icon-view-14.svg" alt="view"/>
+                        <span>{ props.view }</span>
                     </li>
                 </ul>
             </div>
             <div className="searchbar desktop">
-                <input type="text" placeholder="검색" />
+                <input type="text" placeholder={props.t('user.title.placeholder')} />
                 <button>
                     <img src="/img/btn-magnifier-ver-2-22.png" srcSet="/img/btn-magnifier-ver-2-22@2x.png 2x,
-                    /img/btn-magnifier-ver-2-22@3x.png 3x" className="Btn_Magnifier_ver2_22" />
+                    /img/btn-magnifier-ver-2-22@3x.png 3x" className="Btn_Magnifier_ver2_22" alt="search"/>
                 </button>
             </div>
         </div>
@@ -55,4 +53,4 @@ function Title() {
   );
 }
 
-export default Title;
+export default withTranslation()(Title);

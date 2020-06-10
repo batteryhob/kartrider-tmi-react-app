@@ -1,4 +1,7 @@
+@charset "UTF-8";
 /* app.sass */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani");
 html,
 body,
 div,
@@ -164,43 +167,7 @@ input[type="text"]::-ms-reveal {
 input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
-/*font style asset*/
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype"); }
-
+/* 구글 웹 폰트 적용 */
 .svg-icon-important-ver-2-14, .svg-icon-share-14, .svg-icon-tmi-checkflag-01, .svg-icon-tmi-sademotion-01, .svg-icon-tmi-trophy-01, .svg-icon-view-14 {
   background: url("/svg/sprite.css-7b813607.svg") no-repeat; }
 
@@ -246,13 +213,12 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   width: 18px;
   height: 18px; }
 
-html, body {
+html {
   width: 100%;
   height: 100%;
   font-family: "Noto Sans KR";
   font-size: 10px;
-  font-weight: 500;
-  overflow-x: hidden; }
+  font-weight: 500; }
 
 .mobile {
   display: block; }
@@ -265,7 +231,7 @@ html, body {
   padding-bottom: 1px;
   /* app.sass */ }
   #user header, #user .sticky {
-    min-width: 375px;
+    min-width: 320px;
     height: 60px;
     background-color: #fff; }
     #user header .contents, #user .sticky .contents {
@@ -278,8 +244,11 @@ html, body {
         margin-left: 20px; }
       #user header .contents .menu-right, #user .sticky .contents .menu-right {
         position: absolute;
-        top: 5px;
-        right: 20px; }
+        top: 20px;
+        right: 20px;
+        cursor: pointer; }
+        #user header .contents .menu-right .homepage, #user .sticky .contents .menu-right .homepage {
+          display: none; }
   #user .sticky {
     position: fixed;
     width: 100%;
@@ -311,7 +280,7 @@ html, body {
             font-weight: 500; }
   #user main .title {
     position: relative;
-    min-width: 375px;
+    min-width: 320px;
     height: calc(328px - 60px);
     background-color: #fff;
     transition: height .5s ease; }
@@ -380,13 +349,13 @@ html, body {
   #user main section {
     position: relative;
     margin-top: 104px;
-    min-width: 375px;
+    min-width: 320px;
     transition: margin-top .5s ease; }
     #user main section .mode {
       position: absolute;
       top: calc(-29px - 18px);
       width: 100%;
-      min-width: 375px;
+      min-width: 320px;
       text-align: center;
       font-size: 22px; }
       #user main section .mode ul {
@@ -860,10 +829,11 @@ html, body {
       #user footer .logos .nexon {
         width: 63px;
         vertical-align: middle; }
-      #user footer .logos i {
+      #user footer .logos .close {
         margin-left: 5px;
         margin-right: 5px;
-        font-size: 10px;
+        width: 10px;
+        height: 10px;
         vertical-align: middle; }
       #user footer .logos .labs {
         width: 74px;
@@ -880,16 +850,22 @@ html, body {
       color: #bbb; }
   #user .raise {
     position: fixed;
-    bottom: 0px;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    border-radius: 24px;
-    background-color: #fff;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
     transition: transform .5s ease-in-out;
-    transform: translate(0px, 812px);
+    transform: translate(0px, 100%);
     z-index: 9; }
     #user .raise .wrapper {
-      position: relative;
-      padding: 52px 24px 45px 24px; }
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      padding: 52px 24px 45px 24px;
+      box-sizing: border-box;
+      border-radius: 24px 24px 0px 0px;
+      background-color: #fff; }
       #user .raise .wrapper .bar {
         position: absolute;
         top: 8px;
@@ -901,14 +877,59 @@ html, body {
         background-color: #eaecef; }
       #user .raise .wrapper .close {
         position: absolute;
-        top: 29px;
+        top: 28px;
         right: 24px;
-        font-size: 20px; }
+        font-size: 20px;
+        cursor: pointer; }
       #user .raise .wrapper .top {
         font-size: 1.8em; }
-      #user .raise .wrapper ul {
+      #user .raise .wrapper ul.platform {
         margin-top: 30px;
-        font-size: 1.6em; }
+        font-size: 1.6em;
+        max-height: 318px;
+        overflow-y: scroll; }
+        #user .raise .wrapper ul.platform li {
+          position: relative;
+          height: 38px;
+          line-height: 38px;
+          margin-bottom: 20px; }
+          #user .raise .wrapper ul.platform li img {
+            vertical-align: middle;
+            margin-right: 12px; }
+          #user .raise .wrapper ul.platform li span {
+            position: absolute;
+            top: 0px;
+            right: 24px;
+            color: #23b9ff; }
+      #user .raise .wrapper ul.kartselect {
+        margin-top: 30px;
+        font-size: 1.6em;
+        max-height: 318px;
+        overflow-y: scroll; }
+        #user .raise .wrapper ul.kartselect li {
+          position: relative;
+          height: 41px;
+          line-height: 41px;
+          padding-top: 30px;
+          padding-bottom: 35px;
+          border-bottom: 1px solid #f1f1f1; }
+          #user .raise .wrapper ul.kartselect li:last-child {
+            border-bottom: none; }
+          #user .raise .wrapper ul.kartselect li:hover {
+            background-color: #f6f6f6; }
+          #user .raise .wrapper ul.kartselect li .kartimg {
+            vertical-align: middle;
+            margin-right: 12px; }
+          #user .raise .wrapper ul.kartselect li .sub {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            display: inline-block;
+            font-size: 14px;
+            color: #666666; }
+            #user .raise .wrapper ul.kartselect li .sub img {
+              margin-left: 10px;
+              margin-right: 5px; }
     #user .raise.active {
       transform: translate(0px, 0px); }
   @media only screen and (min-width: 769px) {
@@ -918,7 +939,6 @@ html, body {
       display: block; }
     #user header, #user .sticky {
       padding-top: 6px;
-      min-width: 375px;
       height: 60px;
       background-color: #fff; }
       #user header .contents, #user .sticky .contents {
@@ -960,6 +980,31 @@ html, body {
               left: calc(30px + 70px + 30px + 70px); }
             #user header .contents .menu-center .underbar.track, #user .sticky .contents .menu-center .underbar.track {
               left: calc(30px + 70px + 30px + 70px + 30px + 70px); }
+        #user header .contents .menu-right, #user .sticky .contents .menu-right {
+          line-height: 30px;
+          right: 42px; }
+          #user header .contents .menu-right .homepage, #user .sticky .contents .menu-right .homepage {
+            display: inline-block;
+            height: 30px; }
+            #user header .contents .menu-right .homepage span, #user .sticky .contents .menu-right .homepage span {
+              margin-right: 5px;
+              font-family: Rajdhani;
+              font-size: 16px;
+              font-weight: 500;
+              color: #000;
+              vertical-align: middle; }
+            #user header .contents .menu-right .homepage .arrow, #user .sticky .contents .menu-right .homepage .arrow {
+              position: relative;
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              background-color: #25bafe;
+              border-radius: 7px;
+              vertical-align: middle; }
+              #user header .contents .menu-right .homepage .arrow img, #user .sticky .contents .menu-right .homepage .arrow img {
+                position: absolute;
+                top: 3px;
+                left: 3px; }
     #user main .title {
       height: calc(306px - 60px); }
       #user main .title .name {
@@ -979,6 +1024,9 @@ html, body {
           top: calc(306px - 60px);
           right: 0px;
           margin-top: 28px; }
+          #user main .title .name .share ul li img {
+            width: 14px;
+            vertical-align: middle; }
           #user main .title .name .share ul li span.desktop {
             display: inline; }
         #user main .title .name .searchbar {
@@ -1067,7 +1115,8 @@ html, body {
               margin-bottom: 16px; }
               #user main section .summary .contents .left .platform ul li img {
                 vertical-align: middle;
-                width: 30px; }
+                width: 30px;
+                margin-right: 6px; }
               #user main section .summary .contents .left .platform ul li span {
                 margin-left: 6px;
                 color: #23b9ff; }
@@ -1086,7 +1135,7 @@ html, body {
             #user main section .summary .contents .right .chart .draw .progress-bar__progress {
               stroke-width: 1.5; }
             #user main section .summary .contents .right .chart .draw .icons img {
-              width: initial; }
+              width: 94px; }
             #user main section .summary .contents .right .chart .draw .icons .desktop {
               font-size: 1.8em; }
       #user main section .record .contents .left {

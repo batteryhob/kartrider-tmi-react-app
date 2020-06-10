@@ -1,45 +1,120 @@
 import React, { Component } from 'react';
+import { observer, inject } from 'mobx-react';
 
+// the hoc
+import { withTranslation } from 'react-i18next';
 
+@inject(stores => ({
+  getUser: stores.userStore.getUser
+}))
+
+@observer
 class Searchbar extends Component {
 
     constructor(props) {
         super(props);
+        let { t } = this.props;
         this.state = {
-            category: "유저",
+            category: t("main.searchbar.category1"),
             keyword: "",
-            currentKeywords: [],
+            currentKeywords: []
         };
     }
 
-    inputChange = (e) => {
+    componentDidMount(){
+        //최근검색어
+        let localKeywords = localStorage.getItem('currentKeywords')
+        this.setState({
+            currentKeywords : JSON.parse(localKeywords)
+        })
+    }
+
+    /*핸들러*/
+    _inputChange = (e) => {
         this.props.activeCheck(e.target.value);
         this.setState({
             keyword : e.target.value
         })
     }
-
-    selectChange = (e) => {
+    _selectChange = (e) => {
         this.setState({
             category : e.target.value
         })
     }
 
+    /*펑션*/
+    findNick = (el) => {
 
+        let { t } = this.props;
+        let { keyword, currentKeywords } = this.state;
+        let temp = [...currentKeywords];
+
+        //최근검색어
+        if(typeof el === 'string')
+            keyword = el;
+
+        //벨리데이션
+        if(keyword.trim() === '')
+        {
+            alert(t("main.searchbar.placeholder"));
+            return
+        }
+
+        //유저찾기(API조회)
+        this.props.getUser(keyword);
+
+
+        //최근검색어세팅
+        if(!currentKeywords.includes(keyword))
+        {
+            temp.unshift(keyword)
+            if(temp.length > 5)
+                temp.pop()
+        }else{
+            temp.splice(temp.indexOf(keyword),1)
+            temp.unshift(keyword)
+        }        
+        this.setState({
+            keyword: "",
+            currentKeywords : temp
+        })
+        localStorage.setItem('currentKeywords', JSON.stringify(temp));
+                
+
+        //이동
+        this.props.history.push({
+            pathname: `/drift/user/${keyword}`
+        })
+
+    }
+    removeCurrent = (el,e) => {
+        e.stopPropagation();
+    }
+    
     render(){
 
-        let { category, keyword }  = this.state;
+        let { t }  = this.props;
+        let { category, keyword, currentKeywords }  = this.state;
 
         let current;
-        if(keyword.trim().length > 0){
+        if(keyword.trim().length > 0 && currentKeywords.length > 0){
             current =   <div className="current">
                             <div className="desc">
-                                최근 검색어
+                                {t("main.searchbar.recently")}
                             </div>
                             <ul>
-                                <li>
-                                    셀럽지민
-                                </li>
+                                {
+                                    currentKeywords.map((el,i)=>{
+                                        return(
+                                            <li key={i} onClick={ ()=> this.findNick(el) }>
+                                                { el }
+                                                <img onClick={ (e)=> this.removeCurrent(el, e) } src="/img/icon-popupclose-14.png" 
+                                                srcSet="/img/icon-popupclose-14@2x.png 2x, /img/icon-popupclose-14@3x.png 3x" 
+                                                className="close" alt="remove"/>
+                                            </li>
+                                        )
+                                    })
+                                }
                             </ul>
                         </div>
         }
@@ -51,18 +126,18 @@ class Searchbar extends Component {
                     <div className="contents">
                         <div className="select">
                             <label htmlFor="selectCategory">{ category }</label>
-                            <select id="selectCategory" onChange={ this.selectChange } defaultValue="유저">
-                                <option value="유저">유저</option>
-                                <option value="카트" disabled>카트</option>
-                                <option value="트랙" disabled>트랙</option>
+                            <select id="selectCategory" onChange={ this._selectChange } defaultValue={t("main.searchbar.category1")}>
+                                <option value={t("main.searchbar.category1")}>{t("main.searchbar.category1")}</option>
+                                <option value={t("main.searchbar.category2")} disabled>{t("main.searchbar.category2")}</option>
+                                <option value={t("main.searchbar.category3")} disabled>{t("main.searchbar.category3")}</option>
                             </select>
                         </div>
-                        <input type="search" placeholder="유저 닉네임을 입력해주세요." defaultValue={ keyword } onChange={ this.inputChange }/>
-                        <button className="btn">
-                            <img src="/img/btn-magnifier-ver-2-22.png" srcSet="/img/btn-magnifier-ver-2-22@2x.png 2x, /img/btn-magnifier-ver-2-22@3x.png 3x" className="Btn_Magnifier_ver2_22" />
+                        <input type="search" placeholder={t("main.searchbar.placeholder")} value={ keyword } onChange={ this._inputChange } />
+                        <button className="btn" onClick={ this.findNick }>
+                            <img src="/img/btn-magnifier-ver-2-22.png" srcSet="/img/btn-magnifier-ver-2-22@2x.png 2x, /img/btn-magnifier-ver-2-22@3x.png 3x" alt="search"/>
                         </button>
                         <div className="dao desktop">
-                            <img src="/img/rolling-charactor.png"srcSet="/img/rolling-charactor@2x.png 2x, /img/rolling-charactor@3x.png 3x" className="#Rolling_charactor" />
+                            <img src="/img/rolling-charactor.png"srcSet="/img/rolling-charactor@2x.png 2x, /img/rolling-charactor@3x.png 3x" alt="dao" />
                         </div>
                     </div>
                 </form>
@@ -73,4 +148,4 @@ class Searchbar extends Component {
 
 }
 
-export default Searchbar;
+export default withTranslation()(Searchbar);

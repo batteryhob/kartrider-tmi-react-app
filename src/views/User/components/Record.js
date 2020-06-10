@@ -1,6 +1,7 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
-function Record() {
+function Record(props) {
   return (
     <div className="record">
         <div className="contents">
@@ -60,9 +61,9 @@ function Record() {
                         <img src="/img/icon-tmi-record-ready-01.png"
                         srcSet="/img/icon-tmi-record-ready-01@2x.png 2x,
                                 /img/icon-tmi-record-ready-01@3x.png 3x"
-                        className="Icon_tmi_record_ready_01" />
+                        className="Icon_tmi_record_ready_01" alt="ready"/>
                     </div>
-                    <p className="ready">준비중입니다.</p>
+                    <p className="ready">{ props.t('user.record.ready') }</p>
                     <p className="ready-desc">(클로즈 베타3부터 이용 가능)</p>
                 </div>
             </div>
@@ -87,4 +88,4 @@ function Record() {
   );
 }
 
-export default Record;
+export default withTranslation()(Record);

@@ -19,7 +19,7 @@ const Bgs = ({ menu1, menu2, menu3, menu4 }) => {
                 <img src="/img/search-bg.png"
                     srcSet="/img/search-bg@2x.png 2x,
                     /img/search-bg@3x.png 3x"
-                    className="#Search-bg" />
+                    className="#Search-bg" alt="bg" />
             </div>
         </Fragment>
     );
